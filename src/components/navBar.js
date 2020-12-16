@@ -1,5 +1,5 @@
 import React from 'react';
-
+import'../styles/NavBar.css'
 
 function NavBar() {
 
@@ -8,11 +8,11 @@ function NavBar() {
 
 
     return ( 
-        <div>
-            <ul>
-                 <il>logo</il>
-                 <il>Info</il>
-                 <il>About</il>
+        <div >
+            <ul className='navLinks'>
+                 <li>logo</li>
+                 <li>Info</li>
+                 <li>About</li>
             </ul>
         </div>
    )
