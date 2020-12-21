@@ -1,9 +1,8 @@
 import React,{useState, useEffect} from 'react';
 import axios from 'axios';
 import { Route, Switch } from 'react-router-dom';
-// import {createGlobalStyle} from 'styled-components';
 import NavBar from './components/NavBar';
-import HomePage from './components/HomePage';
+import HomePage from './components/HomePage'
 import ImageDesc from './components/ImageDesc';
 import AboutMe from './components/AboutMe';
 import {DateContext} from './contexts/DateContext';
@@ -33,14 +32,13 @@ const App = () => {
 
   return (
     <div className="App" >
-      {/* <GlobalStyle/> */}
       <NavBar/>
       <ImgContext.Provider value={{photoData}}>
       <Switch>
         <DateContext.Provider value={{date, setDate}}>
-          <Route exact path= '/' component={HomePage}/>
-          <Route exact path= '/ImageDesc' component={ImageDesc}/>
           <Route exact path= '/AboutMe' component={AboutMe}/>
+          <Route exact path= '/ImageDesc' component={ImageDesc}/>
+          <Route exact path= '/' component={HomePage}/>
         </DateContext.Provider>
       </Switch>
       {photoData.media_type === 'image' ? <BgImg/> : <BgVid/>}
