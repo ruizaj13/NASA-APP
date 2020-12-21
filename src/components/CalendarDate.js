@@ -1,17 +1,14 @@
-import React, {useState} from 'react';
+import React, {useContext} from 'react';
+import {DateContext} from '../contexts/DateContext';
 
-const d = new Date();
 
-const initialDate = d.getFullYear() + '-'
-  + ('0' + (d.getMonth() + 1)).slice(-2) + '-'
-  + ('0' + d.getDate()).slice(-2);
 
 const CalendarDate = () => {
-    
-    const [date, setDate] = useState(initialDate);
+    const {date, setDate} = useContext(DateContext)
 
     const handleChange = (e) => {
         setDate(e.target.value)
+
     }
 
     return(

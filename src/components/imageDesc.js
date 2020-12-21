@@ -1,11 +1,20 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import styled from 'styled-components';
+import {ImgContext} from '../contexts/ImgContext';
+
+const StyledDesc = styled.div`
+    color: white;
+`
 
 const ImageDesc = () => {
+    const {photoData} = useContext(ImgContext);
+
+
 
     return (
-        <div>
-        <h1>Description</h1>
-        </div>
+        <StyledDesc>
+            <h2>{photoData.title}</h2>
+        </StyledDesc>
     )
 }
 
