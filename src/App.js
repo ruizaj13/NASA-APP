@@ -1,13 +1,15 @@
 import React,{useState, useEffect} from 'react';
 import axios from 'axios';
 import { Route, Switch } from 'react-router-dom';
-import {createGlobalStyle} from 'styled-components';
+// import {createGlobalStyle} from 'styled-components';
 import NavBar from './components/NavBar';
 import HomePage from './components/HomePage';
 import ImageDesc from './components/ImageDesc';
 import AboutMe from './components/AboutMe';
 import {DateContext} from './contexts/DateContext';
 import {ImgContext} from './contexts/ImgContext';
+import BgImg from './components/BgImg';
+import BgVid from './components/BgVid';
 
 const d = new Date();
 
@@ -28,26 +30,22 @@ const App = () => {
   }, [date])
 
 
-  const GlobalStyle = createGlobalStyle`
-  body{
-    background-image: url(${photoData.hdurl}) ;
-    background-size: 100% 100vh; 
-  }
-  `
 
   return (
-    <div className="App">
-      <GlobalStyle/>
+    <div className="App" >
+      {/* <GlobalStyle/> */}
       <NavBar/>
+      <ImgContext.Provider value={{photoData}}>
       <Switch>
         <DateContext.Provider value={{date, setDate}}>
-        <ImgContext.Provider value={{photoData}}>
           <Route exact path= '/' component={HomePage}/>
-          <Route path= '/ImageDesc' component={ImageDesc}/>
-          <Route path= '/AboutMe' component={AboutMe}/>
-        </ImgContext.Provider>
+          <Route exact path= '/ImageDesc' component={ImageDesc}/>
+          <Route exact path= '/AboutMe' component={AboutMe}/>
         </DateContext.Provider>
       </Switch>
+      {photoData.media_type === 'image' ? <BgImg/> : <BgVid/>}
+      </ImgContext.Provider>
+
     </div>
   );
 }

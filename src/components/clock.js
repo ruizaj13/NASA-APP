@@ -1,6 +1,12 @@
 import React, {useState} from 'react';
+import styled from 'styled-components';
 
 let time = (new Date().toLocaleTimeString())
+
+const StyledClock=styled.div`
+    margin-bottom: -5%;
+
+`
 
 const CalenderDate = () => {
     const [currentTime ,setTime] = useState(time)
@@ -13,9 +19,9 @@ const CalenderDate = () => {
     setInterval(updateTime, 1000)
 
     return(
-        <div>
+        <StyledClock>
             <h2>{currentTime}</h2>
-        </div>
+        </StyledClock>
     )
 }
 
