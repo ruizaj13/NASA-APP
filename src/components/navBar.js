@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const StyledNav = styled.ul`
@@ -46,7 +46,7 @@ const NavBar = () => {
     return ( 
         <div>
             <StyledNav className='navLinks'>
-                 {/* <Link to='/'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1280px-NASA_logo.svg.png' alt='nasa logo'/></Link> */}
+                 <Link to='/'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1280px-NASA_logo.svg.png' alt='nasa logo'/></Link>
                  <Link to='/ImageDesc'><button className='info'>Description</button></Link>
                  <Link to='/AboutMe'><button className='about'>Developer</button></Link>
             </StyledNav>
