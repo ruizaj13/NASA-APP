@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, {keyframes} from 'styled-components';
-import Clock from './Clock';
+import Clock from './clock';
 import CalendarDate from './CalendarDate';
 
 const StyledHomePage = styled.div`

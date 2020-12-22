@@ -5,8 +5,8 @@ import {DateContext} from './contexts/DateContext';
 import {ImgContext} from './contexts/ImgContext';
 import NavBar from './components/navBar';
 import HomePage from './components/HomePage';
-import ImageDesc from './components/ImageDesc';
-import AboutMe from './components/AboutMe';
+import ImageDesc from './components/imageDesc';
+import AboutMe from './components/aboutMe';
 import BgImg from './components/BgImg';
 import BgVid from './components/BgVid';
 
