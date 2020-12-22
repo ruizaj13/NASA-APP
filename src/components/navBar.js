@@ -4,31 +4,26 @@ import styled from 'styled-components';
 
 const StyledNav = styled.ul`
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     list-style-type: none;
     max-width: 100%;
+
 
     button {
         margin-top: 15%;
         background-color: rgba(247, 245, 245,0.2);
         color: white;
-        font-size: 110%;
+        font-size: 100%;
         padding: 5% 5%;
         border-radius: 10%;
         border-style: none;
+        transition: 500ms;    
     }
 
-    .info{
-        margin-top: 14%;
-        margin-left: 590%;
-        /* padding-top: 5%;
-        padding-bottom: 5%; */
-
-    }
-
-    .about{
-        margin-left: 200%;
+    button:hover {
+        font-size: 110%;
+        transition: 500ms;    
     }
 
     img {
@@ -43,13 +38,13 @@ const StyledNav = styled.ul`
 const NavBar = () => {
 
     return ( 
-        <div>
-            <StyledNav className='navLinks'>
+        
+            <StyledNav>
                  <Link to='/'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1280px-NASA_logo.svg.png' alt='nasa logo'/></Link>
-                 <Link to='/ImageDesc'><button className='info'>Description</button></Link>
-                 <Link to='/AboutMe'><button className='about'>Developer</button></Link>
+                 <Link to='/ImageDesc'><button>Description</button></Link>
+                 <Link to='/AboutMe'><button>Developer</button></Link>
             </StyledNav>
-        </div>
+        
    )
 }
 
