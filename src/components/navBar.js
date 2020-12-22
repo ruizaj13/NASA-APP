@@ -13,8 +13,8 @@ const StyledNav = styled.ul`
         margin-top: 15%;
         background-color: rgba(247, 245, 245,0.2);
         color: white;
-        font-size: 125%;
-        padding: 10% 10%;
+        font-size: 110%;
+        padding: 5% 5%;
         border-radius: 10%;
         border-style: none;
     }
@@ -22,8 +22,8 @@ const StyledNav = styled.ul`
     .info{
         margin-top: 14%;
         margin-left: 590%;
-        padding-top: 11%;
-        padding-bottom: 11%;
+        /* padding-top: 5%;
+        padding-bottom: 5%; */
 
     }
 
