@@ -7,7 +7,8 @@ const StyledNav = styled.ul`
     justify-content: space-around;
     align-items: center;
     list-style-type: none;
-    
+    max-width: 100%;
+
     button {
         margin-top: 15%;
         background-color: rgba(247, 245, 245,0.2);
@@ -16,8 +17,6 @@ const StyledNav = styled.ul`
         padding: 12% 30%;
         border-radius: 10%;
         border-style: none;
-        box-shadow:0px 0px 5px 0px black;
-
     }
 
     .info{
