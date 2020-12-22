@@ -14,7 +14,7 @@ const StyledNav = styled.ul`
         background-color: rgba(247, 245, 245,0.2);
         color: white;
         font-size: 125%;
-        padding: 12% 30%;
+        padding: 10% 10%;
         border-radius: 10%;
         border-style: none;
     }
