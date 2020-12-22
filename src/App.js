@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Route, Switch } from 'react-router-dom';
 import {DateContext} from './contexts/DateContext';
 import {ImgContext} from './contexts/ImgContext';
-import NavBar from './components/NavBar';
+import NavBar from './components/navBar';
 import HomePage from './components/HomePage';
 import ImageDesc from './components/ImageDesc';
 import AboutMe from './components/AboutMe';
